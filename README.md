@@ -7,6 +7,8 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
+# Fitur 1 : CRUDS Data Mahasiswa
+
 Aplikasi Kelola data Mahasiswa Fitur 1 sudah mencakup beberapa fungsi seperti Create, Read, Update, Delete serta fitur Search data
 
 ## Tampilkan Data ke dalam Table
