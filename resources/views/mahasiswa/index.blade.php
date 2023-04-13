@@ -4,7 +4,7 @@
     <!-- START DATA -->
     <div class="my-0 p-5 bg-body rounded shadow-sm">
         <div class="pb-1">
-            <h2>Data Mahasiswa</h2>
+            <h2>Kampus Kami | <label style="color:rgb(113, 113, 113);">Data Mahasiswa</label></h2>
             <p>Kelola data mahasiswa</p>
         </div>
         

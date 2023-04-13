@@ -7,7 +7,7 @@
     @csrf
     <div class="my-0 p-5 bg-body rounded shadow-sm">
         <div class="pb-1">
-            <h2>Tambah Data Mahasiswa</h2>
+            <h2>Kampus Kami | <label style="color:rgb(113, 113, 113);">Tambah Data Mahasiswa</label></h2>
             <p>Form untuk menambahkan data Mahasiswa, Mohon isi lengkap</p>
         </div>
     

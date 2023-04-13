@@ -8,7 +8,7 @@
     @method('PUT')
     <div class="my-0 p-5 bg-body rounded shadow-sm">
         <div class="pb-1">
-            <h2>Modifikasi Data Mahasiswa</h2>
+            <h2>Kampus Kami | <label style="color:rgb(113, 113, 113);">Modifikasi Data Mahasiswa</label></h2>
             <p>Form untuk memodifikasi data Mahasiswa, Mohon isi dengan benar</p>
         </div>
     
