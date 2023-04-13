@@ -26,7 +26,7 @@
                 <tr>
                     <th style="text-align: center;">#</th>
                     <th>NIM</th>
-                    <th>Foto</th>
+                    <th style="text-align: center;">Foto Mahasiswa</th>
                     <th>Nama Mahasiswa</th>
                     <th>Jenis Kelamin</th>
                     <th>Jurusan</th>
@@ -41,19 +41,26 @@
                     <tr>
                         <td style="text-align: center;">{{ $i }}</td>
                         <td>{{ $item->nim }}</td>
-                        <td><img src="{{ asset('img/nurse.png') }}" style="max-width: 25px; max-height: 25px"></td>
+                        @if($item->foto_mahasiswa != null || $item->foto_mahasiswa != '')
+                            <td style="text-align: center;"><a target="_blank" href="{{ url('pictures').'/'.$item->foto_mahasiswa }}"><img src="{{ url('pictures').'/'.$item->foto_mahasiswa }}" style="max-width: 25px; max-height: 25px; border-radius: 50%;"></a></td>
+                        @else 
+                            <td style="text-align: center;"><img src="{{ asset('img/default-profile.png') }}" style="max-width: 25px; max-height: 25px; border-radius: 50%;"></td>
+                        @endif
                         <td><a style="text-decoration: none" href="{{ url('mahasiswa/'.$item->nim) }}">{{ $item->nama }}</a></td>
-                        <td>Laki-laki</td>
+                        @if($item->jenis_kelamin != null || $item->jenis_kelamin != '')
+                            <td>{{ $item->jenis_kelamin }}</td>
+                        @else 
+                            <td><strong><i><label style="color:red;">Tidak ada Jenis Kelamin</label></i></strong></td>
+                        @endif
                         <td>{{ $item->jurusan }}</td>
                         <td>{{ $item->created_at }}</td>
                         <td style="text-align: center;">
-                            <a href='{{ url('mahasiswa/'.$item->nim.'/edit') }}' class="btn btn-warning btn-sm">Edit</a>
+                            <a href='{{ url('mahasiswa/'.$item->nim.'/edit') }}' class="btn btn-primary btn-sm">Edit</a>
                             <form onsubmit="return confirm('Yakin ingin menghapus data mahasiswa ini?')" class="d-inline" action="{{ url('mahasiswa/'.$item->nim) }}" method="post">
                                 @csrf
                                 @method('DELETE')
                                 <button class="btn btn-danger btn-sm" type="submit" name="submit">Delete</button>
                             </form>
-                            {{-- <a href='{{ url('mahasiswa/'.$item->nim) }}' class="btn btn-primary btn-sm">Detail</a> --}}
                         </td>
                     </tr>
                     <?php $i++ ?>
